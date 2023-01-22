@@ -34,17 +34,17 @@ def predict():
         return render_template('home.html', prediction_text = 'Fire Forest Prediction: {}'.format("FIRE"))
     return render_template('home.html', prediction_text = 'Fire Forest Prediction: {}'.format("NO FIRE"))
 
-@app.route('/predict_batch', methods=['POST','GET'])
-def predict_batch():
+# @app.route('/predict_batch', methods=['POST','GET'])
+# def predict_batch():
 
-    if request.method=='POST':
-        f = request.files['file']
-        f.filename = "X_test.csv"
-        f.save("files/"+f.filename)
-        X_test = pd.read_csv('files/X_test.csv')
-        output = model.predict(X_test)
-        # for i in range(len(output)):
-        return render_template('batch.html', prediction_text = "{}".format(output))
+#     if request.method=='POST':
+#         f = request.files['file']
+#         f.filename = "X_test.csv"
+#         f.save("files/"+f.filename)
+#         X_test = pd.read_csv('files/X_test.csv')
+#         output = model.predict(X_test)
+#         # for i in range(len(output)):
+#         return render_template('batch.html', prediction_text = "{}".format(output))
         
 
 if __name__=="__main__":
