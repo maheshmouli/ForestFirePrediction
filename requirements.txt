@@ -1,0 +1,11 @@
+Flask
+scikit-learn==0.24.2
+sklearn
+numpy
+pandas
+pickle
+flask_cors
+gunicorn
+Jinja2
+Werkzeug
+scipy
